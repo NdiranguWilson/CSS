@@ -5,6 +5,8 @@
 *
 *
 */
+@import 'partials';
+
 $font_stack: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -27,7 +29,8 @@ body {
   font: $font_stack;
   background: #080e24  repeat;
   color: #626668;
-  div.wrap {
+}
+  .wrap {
     width: 960px;
     margin: 0 auto;
     padding: 60px 0;
@@ -35,62 +38,65 @@ body {
   section {
     display: block;
     position: relative;
+
+    header {
+      text-align: center;
+    }
+    header h1 {
+      @extend header;
+      font-size: 126px;
+      line-height: 1;
+      color: #eee5a2;
+      text-transform: uppercase;
+      text-shadow: 5px 5px #32312b;
+    }
+    header p {
+      font-size: 24px;
+      color: #6a695f;
+      margin: 0 0 10px;
+    }
+    header p.disclaimer {
+      font-size: 13px;
+      color: #33373d;
+    }
   }
-  header {
-    text-align: center;
-  }
-  header h1 {
-    font-size: 126px;
-    line-height: 1;
-    color: #eee5a2;
-    text-transform: uppercase;
-    text-shadow: 5px 5px #32312b;
-  }
-  header p {
-    font-size: 24px;
-    color: #6a695f;
-    margin: 0 0 10px;
-  }
-  header p.disclaimer {
-    font-size: 13px;
-    color: #33373d;
-  }
+
   /* Atom System Styles */
-  ul.quantum {
+  .quantum {
     position: relative;
     height: 810px;
     list-style: none;
     @include transition(0.09s);
     overflow: hidden;
   }
-  ul.quantum li {
+  .quantum li {
     text-indent: -9999px;
     display: block;
     position: absolute;
     border: 2px solid #394057;
 
   }
-  ul.quantum li span {
+  .quantum li span {
     display: block;
     position: absolute;
     width: 10px;
     height: 10px;
     @include border-radius(5px);
   }
-  ul.quantum li.active {
+  .quantum li.active {
     border-color: #aa4200;
   }
-  ul.quantum li.active.atom,
-  ul.quantum li.active span {
+  .quantum li.active.atom,
+  .quantum li.active span {
     @include scale(1.3);
   }
-  ul.quantum li.active.atom span {
+  .quantum li.active.atom span {
     border: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
   }
-  ul.quantum li.atom {
+  .quantum li.atom {
     width: 40px;
     height: 40px;
     @include border-radius(20px);
@@ -106,13 +112,13 @@ body {
     z-index: 100;
     @include transition(0.2s);
   }
-  ul.quantum li.atom span {
+  .quantum li.atom span {
     width: 20px;
     height: 20px;
     @include border-radius(30px);
 
   }
-  ul.quantum li.first {
+  .quantum li.first {
     width: 140px;
     height: 120px;
     @include border-radius(52px);
@@ -121,19 +127,19 @@ body {
     left: 430px;
     z-index: 99;
   }
-  ul.quantum li.first span {
+  .quantum li.first span {
     background: #b6bac5;
     top: 10px;
     left: 10px;
   }
-  
-  ul#descriptions {
+
+  #descriptions {
     position: absolute;
     top: 150px;
     right: 100px;
     list-style: none;
   }
-  ul#descriptions h2 {
+  #descriptions h2 {
     cursor: pointer;
     color: #386077;
     @include transition(0.15s);
@@ -142,11 +148,11 @@ body {
     z-index: 101;
     @include scale(1);
   }
-  ul#descriptions h2:hover {
+  #descriptions h2:hover {
     color: #aa4200;
     @include scale(1.08);
   }
-  ul#descriptions li p {
+  #descriptions li p {
     position: absolute;
     left: -250px;
     top: 0;
@@ -164,13 +170,13 @@ body {
     z-index: 100;
     border: 1px solid #1c203c;
   }
-  ul#descriptions h2:hover+p {
+  #descriptions h2:hover+p {
     visibility: visible;
     opacity: 0.9;
     left: -280px;
   }
   /* CSS3 Animations  for the nucleus of quantum model*/
-  ul.quantum li {
+  .quantum li {
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     -webkit-animation-name: orbit;
@@ -179,32 +185,15 @@ body {
     -moz-animation-name: orbit;
   }
   /* CSS3 Animations  for text display explaining the various models and energy level*/
-  ul.quantum li.first {
+  .quantum li.first {
     -webkit-animation-duration: 5s;
     -moz-animation-duration: 5s;
   }
-  ul.quantum li.second {
+  .quantum li.second {
     -webkit-animation-duration: 8s;
     -moz-animation-duration: 8s;
   }
-  ul.quantum li.earth {
+  .quantum li.earth {
     -webkit-animation-duration: 12s;
     -moz-animation-duration: 12s;
   }
-  @-webkit-keyframes orbit {
-    from {
-      -webkit-transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-  @-moz-keyframes orbit {
-    from {
-      -moz-transform: rotate(0deg);
-    }
-    to {
-      -moz-transform: rotate(360deg);
-    }
-  }
-}

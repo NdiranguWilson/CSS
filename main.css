@@ -5,44 +5,47 @@
 *
 *
 */
-
+@-webkit-keyframes orbit {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+@-moz-keyframes orbit {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg); } }
 body {
   font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #080e24 repeat;
-  color: #626668;
-  /* Atom System Styles */
-  /* CSS3 Animations  for the nucleus of quantum model*/
-  /* CSS3 Animations  for text display explaining the various models and energy level*/
-}
-body div.wrap {
+  background: #080e24  repeat;
+  color: #626668; }
+
+.wrap {
   width: 960px;
   margin: 0 auto;
-  padding: 60px 0;
-}
-body section {
+  padding: 60px 0; }
+
+section {
   display: block;
-  position: relative;
-}
-body header {
-  text-align: center;
-}
-body header h1 {
-  font-size: 126px;
-  line-height: 1;
-  color: #eee5a2;
-  text-transform: uppercase;
-  text-shadow: 5px 5px #32312b;
-}
-body header p {
-  font-size: 24px;
-  color: #6a695f;
-  margin: 0 0 10px;
-}
-body header p.disclaimer {
-  font-size: 13px;
-  color: #33373d;
-}
-body ul.quantum {
+  position: relative; }
+  section header, section header h1 {
+    text-align: center; }
+  section header h1 {
+    font-size: 126px;
+    line-height: 1;
+    color: #eee5a2;
+    text-transform: uppercase;
+    text-shadow: 5px 5px #32312b; }
+  section header p {
+    font-size: 24px;
+    color: #6a695f;
+    margin: 0 0 10px; }
+  section header p.disclaimer {
+    font-size: 13px;
+    color: #33373d; }
+
+/* Atom System Styles */
+.quantum {
   position: relative;
   height: 810px;
   list-style: none;
@@ -50,39 +53,40 @@ body ul.quantum {
   -moz-transition: all 0.09s ease-in;
   -o-transition: all 0.09s ease-in;
   transition: all 0.09s ease-in;
-  overflow: hidden;
-}
-body ul.quantum li {
+  overflow: hidden; }
+
+.quantum li {
   text-indent: -9999px;
   display: block;
   position: absolute;
-  border: 2px solid #394057;
-}
-body ul.quantum li span {
+  border: 2px solid #394057; }
+
+.quantum li span {
   display: block;
   position: absolute;
   width: 10px;
   height: 10px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-body ul.quantum li.active {
-  border-color: #aa4200;
-}
-body ul.quantum li.active.atom, body ul.quantum li.active span {
+  border-radius: 5px; }
+
+.quantum li.active {
+  border-color: #aa4200; }
+
+.quantum li.active.atom,
+.quantum li.active span {
   -webkit-transform: scale(1.3);
   -moz-transform: scale(1.3);
   -o-transform: scale(1.3);
-  transform: scale(1.3);
-}
-body ul.quantum li.active.atom span {
+  transform: scale(1.3); }
+
+.quantum li.active.atom span {
   border: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  box-shadow: none;
-}
-body ul.quantum li.atom {
+  box-shadow: none; }
+
+.quantum li.atom {
   width: 40px;
   height: 40px;
   -webkit-border-radius: 20px;
@@ -101,16 +105,16 @@ body ul.quantum li.atom {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-}
-body ul.quantum li.atom span {
+  transition: all 0.2s ease-in; }
+
+.quantum li.atom span {
   width: 20px;
   height: 20px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
-  border-radius: 30px;
-}
-body ul.quantum li.first {
+  border-radius: 30px; }
+
+.quantum li.first {
   width: 140px;
   height: 120px;
   -webkit-border-radius: 52px;
@@ -118,20 +122,20 @@ body ul.quantum li.first {
   border-radius: 52px;
   top: 270px;
   left: 430px;
-  z-index: 99;
-}
-body ul.quantum li.first span {
+  z-index: 99; }
+
+.quantum li.first span {
   background: #b6bac5;
   top: 10px;
-  left: 10px;
-}
-body ul#descriptions {
+  left: 10px; }
+
+#descriptions {
   position: absolute;
   top: 150px;
   right: 100px;
-  list-style: none;
-}
-body ul#descriptions h2 {
+  list-style: none; }
+
+#descriptions h2 {
   cursor: pointer;
   color: #386077;
   -webkit-transition: all 0.15s ease-in;
@@ -144,16 +148,16 @@ body ul#descriptions h2 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -o-transform: scale(1);
-  transform: scale(1);
-}
-body ul#descriptions h2:hover {
+  transform: scale(1); }
+
+#descriptions h2:hover {
   color: #aa4200;
   -webkit-transform: scale(1.08);
   -moz-transform: scale(1.08);
   -o-transform: scale(1.08);
-  transform: scale(1.08);
-}
-body ul#descriptions li p {
+  transform: scale(1.08); }
+
+#descriptions li p {
   position: absolute;
   left: -250px;
   top: 0;
@@ -174,48 +178,33 @@ body ul#descriptions li p {
   color: #767892;
   line-height: 1.7;
   z-index: 100;
-  border: 1px solid #1c203c;
-}
-body ul#descriptions h2:hover + p {
+  border: 1px solid #1c203c; }
+
+#descriptions h2:hover + p {
   visibility: visible;
   opacity: 0.9;
-  left: -280px;
-}
-body ul.quantum li {
+  left: -280px; }
+
+/* CSS3 Animations  for the nucleus of quantum model*/
+.quantum li {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-name: orbit;
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: linear;
-  -moz-animation-name: orbit;
-}
-body ul.quantum li.first {
+  -moz-animation-name: orbit; }
+
+/* CSS3 Animations  for text display explaining the various models and energy level*/
+.quantum li.first {
   -webkit-animation-duration: 5s;
-  -moz-animation-duration: 5s;
-}
-body ul.quantum li.second {
+  -moz-animation-duration: 5s; }
+
+.quantum li.second {
   -webkit-animation-duration: 8s;
-  -moz-animation-duration: 8s;
-}
-body ul.quantum li.earth {
+  -moz-animation-duration: 8s; }
+
+.quantum li.earth {
   -webkit-animation-duration: 12s;
-  -moz-animation-duration: 12s;
-}
-@-webkit-keyframes orbit {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@-moz-keyframes orbit {
-  from {
-    -moz-transform: rotate(0deg);
-  }
-  to {
-    -moz-transform: rotate(360deg);
-  }
-}
+  -moz-animation-duration: 12s; }
 
 /*# sourceMappingURL=main.css.map */
