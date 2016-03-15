@@ -28,7 +28,7 @@ $font_stack: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 body {
   font: $font_stack;
   background: #080e24  repeat;
-  color: #626668;
+
 }
   .wrap {
     width: 960px;
@@ -133,13 +133,13 @@ body {
     left: 10px;
   }
 
-  #descriptions {
+  .descriptions {
     position: absolute;
     top: 150px;
     right: 100px;
     list-style: none;
   }
-  #descriptions h2 {
+  .descriptions h2 {
     cursor: pointer;
     color: #386077;
     @include transition(0.15s);
@@ -148,11 +148,11 @@ body {
     z-index: 101;
     @include scale(1);
   }
-  #descriptions h2:hover {
+  .descriptions h2:hover {
     color: #aa4200;
     @include scale(1.08);
   }
-  #descriptions li p {
+  .descriptions li p {
     position: absolute;
     left: -250px;
     top: 0;
@@ -170,7 +170,7 @@ body {
     z-index: 100;
     border: 1px solid #1c203c;
   }
-  #descriptions h2:hover+p {
+  .descriptions h2:hover+p {
     visibility: visible;
     opacity: 0.9;
     left: -280px;

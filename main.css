@@ -17,8 +17,7 @@
     -moz-transform: rotate(360deg); } }
 body {
   font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #080e24  repeat;
-  color: #626668; }
+  background: #080e24  repeat; }
 
 .wrap {
   width: 960px;
@@ -129,13 +128,13 @@ section {
   top: 10px;
   left: 10px; }
 
-#descriptions {
+.descriptions {
   position: absolute;
   top: 150px;
   right: 100px;
   list-style: none; }
 
-#descriptions h2 {
+.descriptions h2 {
   cursor: pointer;
   color: #386077;
   -webkit-transition: all 0.15s ease-in;
@@ -150,14 +149,14 @@ section {
   -o-transform: scale(1);
   transform: scale(1); }
 
-#descriptions h2:hover {
+.descriptions h2:hover {
   color: #aa4200;
   -webkit-transform: scale(1.08);
   -moz-transform: scale(1.08);
   -o-transform: scale(1.08);
   transform: scale(1.08); }
 
-#descriptions li p {
+.descriptions li p {
   position: absolute;
   left: -250px;
   top: 0;
@@ -180,7 +179,7 @@ section {
   z-index: 100;
   border: 1px solid #1c203c; }
 
-#descriptions h2:hover + p {
+.descriptions h2:hover + p {
   visibility: visible;
   opacity: 0.9;
   left: -280px; }
